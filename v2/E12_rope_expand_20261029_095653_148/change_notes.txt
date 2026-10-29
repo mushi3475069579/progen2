@@ -1,0 +1,1 @@
+E12 candidate: pre-expand input-independent FP32 RoPE sin/cos; share one coefficient slice between Q/K per layer. Dynamic KV, model weights and deterministic generation retained. No extra dependency. Actual speed/consistency depend on this run.

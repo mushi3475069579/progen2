@@ -1,0 +1,7 @@
+load_id                    official_s E10_s      E12_s      official/E12 E10/E12 consistency
+load1_b1_l32_g256             9.5326     8.7904     7.6168       1.2515  1.1541     100.00%
+load2_b8_l32_g256             9.4833     8.5758     7.4446       1.2738  1.1519     100.00%
+load3_b4_l32_g512            19.0854    17.2647    14.9948       1.2728  1.1514     100.00%
+load4_b4_l512_g64             2.5136     2.2264     1.9490       1.2897  1.1424     100.00%
+OUTPUT: /public/home/xdzs2026_b0644/progen2_medium_contest/results/E12_rope_expand_20261029_095653_148
+E12_ALL_FOUR_EXACT: true. Compare measured times; one run does not prove stable speedup.

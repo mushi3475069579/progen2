@@ -1,0 +1,36 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public/home/xdzs2026_b0644/progen2_medium_contest/submission
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+E12_ROPE_EXPANDED_READY {'attention_layers': 27, 'shared_tables': 1, 'capacity': 1024, 'dtype': 'fp32', 'expanded_coefficients': True, 'shared_qk_views': True, 'table_bytes': 393216}
+Loaded in 17.619s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+[load1_b1_l32_g256] time=7.6168s, same=256/256, consistency=100.00%
+
+[load2_b8_l32_g256] warmup: B=8, L=32, G=256
+[load2_b8_l32_g256] time=7.4446s, same=2048/2048, consistency=100.00%
+
+[load3_b4_l32_g512] warmup: B=4, L=32, G=512
+[load3_b4_l32_g512] time=14.9948s, same=2048/2048, consistency=100.00%
+
+[load4_b4_l512_g64] warmup: B=4, L=512, G=64
+[load4_b4_l512_g64] time=1.9490s, same=256/256, consistency=100.00%
+
+Saved: /public/home/xdzs2026_b0644/progen2_medium_contest/results/E12_rope_expand_20261029_095653_148/evidence/submission_public.json
+PUBLIC_INTERFACE_TEST_PASSED (100% match with the public FP32 reference)
+四项任务测试完成，结果已保存。
